@@ -1,6 +1,6 @@
-package com.example.demo.repository;
+package com.GrupoA.IntegracionJSF.repository;
 
-import com.example.demo.model.Roles;
+import com.GrupoA.IntegracionJSF.model.Roles;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
