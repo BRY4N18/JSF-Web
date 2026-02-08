@@ -1,6 +1,6 @@
 package com.GrupoA.IntegracionJSF.controller;
 
-import com.GrupoA.IntegracionJSF.model.Usuario; // Asegúrate de importar tu entidad
+import com.GrupoA.IntegracionJSF.model.Usuario;
 import com.GrupoA.IntegracionJSF.repository.UsuarioRepository;
 import jakarta.faces.application.FacesMessage;
 import jakarta.faces.context.FacesContext;
