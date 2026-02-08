@@ -2,53 +2,67 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
-      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
-    <h:head>
-        <meta charset="UTF-8"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <title><ui:insert name="title">Bolsa UTEQ</ui:insert></title>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
-        <h:outputStylesheet library="css" name="dashboard-styles.css"/>
-    </h:head>
-    <h:body>
-        <div class="app-container">
-            <aside class="sidebar">
-                <div class="sidebar-header">
-                    <h2>Bolsa UTEQ</h2>
-                    <span>Panel EMPRESA</span>
-                </div>
-                <nav class="sidebar-nav">
-                    <ul>
-                        <li><a href="#"><i class="fa-solid fa-building"></i> Perfil Empresarial</a></li>
-                        <li class="active"><a href="#"><i class="fa-solid fa-briefcase"></i> Gestión de Ofertas</a></li>
-                        <li><a href="#"><i class="fa-solid fa-users-viewfinder"></i> Ver Postulaciones</a></li>
-                        <li>
-                            <h:form>
-                                <h:commandLink action="#{authController.logout}" styleClass="logout-link">
-                                    <i class="fa-solid fa-right-from-bracket"></i> Cerrar Sesión
-                                </h:commandLink>
-                            </h:form>
-                        </li>
-                    </ul>
-                </nav>
-            </aside>
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title><ui:insert name="title">Bolsa UTEQ</ui:insert></title>
 
-            <div class="main-content">
-                <header class="top-bar">
-                    <div class="user-info">
-                        <h1>Hola, <h:outputText value="#{sessionScope.nombre_usuario}" /></h1>
-                        <p>Bienvenido al portal de empleo.</p>
-                    </div>
-                    <div class="user-badge">
-                        <i class="fa-solid fa-user"></i> 
-                        <span><h:outputText value="#{sessionScope.nombre_usuario}" /></span>
-                    </div>
-                </header>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
 
-                <div class="page-content">
-                    <ui:insert name="content">Contenido por defecto</ui:insert>
+    <h:outputStylesheet library="css" name="dashboard-styles.css"/>
+</h:head>
+<h:body>
+    <h:messages globalOnly="true" styleClass="alert-messages"
+                infoStyle="color: green;" errorStyle="color: red;" />
+
+    <div class="app-container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h2>Bolsa UTEQ</h2>
+                <span>Panel EMPRESA</span>
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="#"><i class="fa-solid fa-building"></i> Perfil Empresarial</a></li>
+                    <li class="active">
+                        <h:link outcome="/views/dashboard.xhtml">
+                            <i class="fa-solid fa-briefcase"></i> Gestión de Ofertas
+                        </h:link>
+                    </li>
+                    <li><a href="#"><i class="fa-solid fa-users-viewfinder"></i> Ver Postulaciones</a></li>
+                    <li>
+                        <h:form>
+                            <h:commandLink action="#{tuBean.logout}" styleClass="logout-link">
+                                <i class="fa-solid fa-right-from-bracket"></i> Cerrar Sesión
+                            </h:commandLink>
+                        </h:form>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <div class="main-content">
+            <header class="top-bar">
+                <div class="user-info">
+                    <h1>Hola, <h:outputText value="#{sessionScope.nombre_usuario != null ? sessionScope.nombre_usuario : 'Usuario'}" /></h1>
+                    <p>Bienvenido al portal de empleo.</p>
                 </div>
+                <div class="user-badge">
+                    <i class="fa-solid fa-user"></i>
+                    <span><h:outputText value="#{sessionScope.nombre_usuario}" /></span>
+                </div>
+            </header>
+
+            <div class="page-content">
+                <ui:insert name="content">
+                    Contenido por defecto del panel.
+                </ui:insert>
             </div>
         </div>
-    </h:body>
+    </div>
+
+    <h:outputScript library="js" name="main.js" target="body"/>
+</h:body>
 </html>

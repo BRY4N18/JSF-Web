@@ -33,6 +33,9 @@ public class SecurityConfig {
                                 "/",
                                 "/index.xhtml",
                                 "/jakarta.faces.resource/**",
+                                "/views/**",           // Permite el acceso a la carpeta donde moviste el index
+                                "/templates/**",       // Permite que JSF acceda a layout-simple y layout-dashboard
+                                "/resources/**",
                                 "/api/usuarios/**",
                                 "/api/usuarios-bd/**",
                                 "/api/auth/**",
