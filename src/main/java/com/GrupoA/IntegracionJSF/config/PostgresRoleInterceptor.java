@@ -1,4 +1,4 @@
-package com.example.demo.config;
+package com.GrupoA.IntegracionJSF.config;
 
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;

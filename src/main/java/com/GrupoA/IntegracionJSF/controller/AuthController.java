@@ -3,7 +3,6 @@ package com.GrupoA.IntegracionJSF.controller;
 import com.GrupoA.IntegracionJSF.dto.LoginRequest;
 import com.GrupoA.IntegracionJSF.repository.UsuarioRepository;
 import com.GrupoA.IntegracionJSF.service.AuthService;
-import com.GrupoA.IntegracionJSF.service.EmailService;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
@@ -27,37 +26,10 @@ public class AuthController {
     private AuthService authService;
 
     @Autowired
-    private EmailService emailService;
-
-    @Autowired
     private UsuarioRepository usuarioRepository;
 
     @Autowired
     private PasswordEncoder passwordEncoder;
-
-    @PostMapping("/enviar-codigo")
-    public ResponseEntity<?> solicitarCodigo(
-            @RequestBody Map<String, String> requestData,
-            HttpServletRequest request // Requerimiento: Captura de objeto request
-    ) {
-        String correo = requestData.get("Correo");
-
-        // Ejemplo de captura de metadatos (Request Scope)
-        System.out.println("Solicitud de código desde: " + request.getRemoteAddr());
-
-        if (correo == null || correo.isEmpty()) {
-            return ResponseEntity.badRequest().body(Map.of("error", "El correo es obligatorio"));
-        }
-
-        try {
-            String codigo = String.format("%06d", new Random().nextInt(1000000));
-            authService.guardarCodigo(correo, codigo);
-            emailService.enviarCodigo(correo, codigo);
-            return ResponseEntity.ok(Map.of("mensaje", "Código enviado a " + correo));
-        } catch (Exception e) {
-            return ResponseEntity.internalServerError().body(Map.of("error", "Error en el servidor de correo"));
-        }
-    }
 
     @PostMapping("/login")
     public ResponseEntity<?> login(
