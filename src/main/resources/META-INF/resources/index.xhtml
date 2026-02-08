@@ -1,0 +1,43 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                xmlns:a="http://xmlns.jcp.org/jsf/passthrough"
+                template="/templates/layout-simple.xhtml">
+
+    <ui:define name="title">Bolsa de empleo</ui:define>
+
+    <ui:define name="content">
+        
+        <div class="login-container">
+            <div class="left-panel">
+                <div class="content">
+                    <h:graphicImage library="images" name="WelcomeTeam.png" styleClass="illustration" />
+                    <h1>Bienvenido de<br/>Nuevo</h1>
+                    <p>Accede a tu cuenta para gestionar tus postulaciones.</p>
+                </div>
+            </div>
+
+            <div class="right-panel">
+                <div class="form-content">
+                    <h2>Iniciar Sesión</h2>
+                    <p class="subtitle">Ingresa tus credenciales para continuar.</p>
+
+                    <h:form id="loginForm">
+                        <h:outputLabel for="email" value="CORREO ELECTRÓNICO" styleClass="label-input" />
+                        <h:inputText id="email" styleClass="input-field" a:placeholder="usuario@email.com" />
+
+                        <h:outputLabel for="password" value="CONTRASEÑA" styleClass="label-input" />
+                        <div class="password-wrapper">
+                            <h:inputSecret id="password" styleClass="input-field" a:placeholder="********" />
+                            <i class="fa-solid fa-eye eye-icon"></i>
+                        </div>
+
+                        <h:commandButton value="Entrar" styleClass="btn-submit" action="#{tuBean.login}" />
+                    </h:form>
+                </div>
+            </div>
+        </div>
+
+    </ui:define>
+
+</ui:composition>
