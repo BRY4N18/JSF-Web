@@ -1,0 +1,23 @@
+package com.GrupoA.IntegracionJSF.model;
+
+import jakarta.persistence.*;
+import lombok.Data;
+
+@Entity
+@Table(name = "modalidad_oferta")
+@Data
+public class ModalidadOferta {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id_modalidad")
+    private Integer idModalidad;
+
+    @Column(
+            name = "nombre_modalidad",
+            nullable = false,
+            unique = true,
+            columnDefinition = "VARCHAR(10)"
+    )
+    private String nombreModalidad;
+}
