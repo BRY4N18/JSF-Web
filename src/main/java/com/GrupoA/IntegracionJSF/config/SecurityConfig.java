@@ -30,6 +30,9 @@ public class SecurityConfig {
                 .csrf(csrf -> csrf.disable())
                 .authorizeHttpRequests(auth -> auth
                         .requestMatchers(
+                                "/",
+                                "/index.xhtml",
+                                "/jakarta.faces.resource/**",
                                 "/api/usuarios/**",
                                 "/api/usuarios-bd/**",
                                 "/api/auth/**",

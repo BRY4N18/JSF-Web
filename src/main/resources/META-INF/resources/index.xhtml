@@ -4,7 +4,7 @@
                 xmlns:a="http://xmlns.jcp.org/jsf/passthrough"
                 template="/templates/layout-simple.xhtml">
 
-    <ui:define name="title">Bolsa de empleo</ui:define>
+    <ui:define name="title">Bolsa de empleo - Login</ui:define>
 
     <ui:define name="content">
         
@@ -13,7 +13,7 @@
                 <div class="content">
                     <h:graphicImage library="images" name="WelcomeTeam.png" styleClass="illustration" />
                     <h1>Bienvenido de<br/>Nuevo</h1>
-                    <p>Accede a tu cuenta para gestionar tus postulaciones.</p>
+                    <p>Accede a tu cuenta para gestionar tus postulaciones o publicar nuevas ofertas.</p>
                 </div>
             </div>
 
@@ -22,17 +22,34 @@
                     <h2>Iniciar Sesión</h2>
                     <p class="subtitle">Ingresa tus credenciales para continuar.</p>
 
+                    <h:messages globalOnly="true" 
+                                style="color: #dc3545; background-color: #f8d7da; padding: 10px; border-radius: 5px; margin-bottom: 15px; list-style: none; font-size: 0.9rem;" 
+                                />
+
                     <h:form id="loginForm">
+                        
                         <h:outputLabel for="email" value="CORREO ELECTRÓNICO" styleClass="label-input" />
-                        <h:inputText id="email" styleClass="input-field" a:placeholder="usuario@email.com" />
+                        <h:inputText id="email" 
+                                     value="#{loginBean.correo}"
+                                     styleClass="input-field" 
+                                     a:placeholder="usuario@email.com"
+                                     required="true"
+                                     requiredMessage="Por favor ingresa tu correo." />
 
                         <h:outputLabel for="password" value="CONTRASEÑA" styleClass="label-input" />
                         <div class="password-wrapper">
-                            <h:inputSecret id="password" styleClass="input-field" a:placeholder="********" />
+                            <h:inputSecret id="password" 
+                                           value="#{loginBean.contrasena}"
+                                           styleClass="input-field" 
+                                           a:placeholder="********"
+                                           required="true"
+                                           requiredMessage="Por favor ingresa tu contraseña." />
                             <i class="fa-solid fa-eye eye-icon"></i>
                         </div>
 
-                        <h:commandButton value="Entrar" styleClass="btn-submit" action="#{tuBean.login}" />
+                        <h:commandButton value="Entrar" 
+                                         styleClass="btn-submit" 
+                                         action="#{loginBean.login}" />
                     </h:form>
                 </div>
             </div>
