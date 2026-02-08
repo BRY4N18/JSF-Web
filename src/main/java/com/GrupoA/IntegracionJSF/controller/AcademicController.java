@@ -1,16 +1,15 @@
-package com.example.demo.controller;
+package com.GrupoA.IntegracionJSF.controller;
 
-import com.example.demo.model.Facultad;
-import com.example.demo.model.Carrera;
-import com.example.demo.model.Idioma;
-import com.example.demo.model.JornadaOferta;
-import com.example.demo.model.ModalidadOferta;
-import com.example.demo.model.CategoriaOferta;
-import com.example.demo.model.Ciudad;
-import com.example.demo.model.UsuarioEmpresa;
+import com.GrupoA.IntegracionJSF.model.Facultad;
+import com.GrupoA.IntegracionJSF.model.Carrera;
+import com.GrupoA.IntegracionJSF.model.Idioma;
+import com.GrupoA.IntegracionJSF.model.JornadaOferta;
+import com.GrupoA.IntegracionJSF.model.ModalidadOferta;
+import com.GrupoA.IntegracionJSF.model.CategoriaOferta;
+import com.GrupoA.IntegracionJSF.model.Ciudad;
 import org.springframework.http.ResponseEntity;
 
-import com.example.demo.repository.*;
+import com.GrupoA.IntegracionJSF.repository.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

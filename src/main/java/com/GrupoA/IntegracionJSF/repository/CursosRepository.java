@@ -1,6 +1,6 @@
-package com.example.demo.repository;
+package com.GrupoA.IntegracionJSF.repository;
 
-import com.example.demo.model.Cursos;
+import com.GrupoA.IntegracionJSF.model.Cursos;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

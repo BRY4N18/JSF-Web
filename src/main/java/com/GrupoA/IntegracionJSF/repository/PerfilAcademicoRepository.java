@@ -1,6 +1,6 @@
-package com.example.demo.repository;
+package com.GrupoA.IntegracionJSF.repository;
 
-import com.example.demo.model.PerfilAcademico;
+import com.GrupoA.IntegracionJSF.model.PerfilAcademico;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;

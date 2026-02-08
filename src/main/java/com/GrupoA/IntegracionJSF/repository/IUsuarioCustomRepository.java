@@ -1,5 +1,5 @@
-package com.example.demo.repository;
-import com.example.demo.model.Usuario;
+package com.GrupoA.IntegracionJSF.repository;
+import com.GrupoA.IntegracionJSF.model.Usuario;
 
 public interface IUsuarioCustomRepository {
     void registrarConProcedimiento(Usuario usuario);

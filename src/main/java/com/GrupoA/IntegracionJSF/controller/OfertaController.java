@@ -1,6 +1,6 @@
-package com.example.demo.controller;
-import com.example.demo.model.OfertaLaboral;
-import com.example.demo.repository.OfertaLaboralRepository;
+package com.GrupoA.IntegracionJSF.controller;
+import com.GrupoA.IntegracionJSF.model.OfertaLaboral;
+import com.GrupoA.IntegracionJSF.repository.OfertaLaboralRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;

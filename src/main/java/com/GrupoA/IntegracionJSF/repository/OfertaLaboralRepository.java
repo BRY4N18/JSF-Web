@@ -1,6 +1,6 @@
-package com.example.demo.repository;
+package com.GrupoA.IntegracionJSF.repository;
 
-import com.example.demo.model.OfertaLaboral;
+import com.GrupoA.IntegracionJSF.model.OfertaLaboral;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.query.Procedure;
 import org.springframework.data.repository.query.Param;

@@ -1,6 +1,6 @@
-package com.example.demo.service;
+package com.GrupoA.IntegracionJSF.service;
 
-import com.example.demo.model.Usuario;
+import com.GrupoA.IntegracionJSF.model.Usuario;
 
 public interface IUsuarioService {
     // Definimos qué puede hacer nuestro servicio

@@ -1,7 +1,7 @@
-package com.example.demo.repository;
+package com.GrupoA.IntegracionJSF.repository;
 
-import com.example.demo.model.Postulacion;
-import com.example.demo.model.Usuario;
+import com.GrupoA.IntegracionJSF.model.Postulacion;
+import com.GrupoA.IntegracionJSF.model.Usuario;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;

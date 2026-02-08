@@ -1,4 +1,4 @@
-package com.example.demo.dto;
+package com.GrupoA.IntegracionJSF.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

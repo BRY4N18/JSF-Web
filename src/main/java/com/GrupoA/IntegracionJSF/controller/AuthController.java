@@ -1,9 +1,9 @@
-package com.example.demo.controller;
+package com.GrupoA.IntegracionJSF.controller;
 
-import com.example.demo.dto.LoginRequest;
-import com.example.demo.repository.UsuarioRepository;
-import com.example.demo.service.AuthService;
-import com.example.demo.service.EmailService;
+import com.GrupoA.IntegracionJSF.dto.LoginRequest;
+import com.GrupoA.IntegracionJSF.repository.UsuarioRepository;
+import com.GrupoA.IntegracionJSF.service.AuthService;
+import com.GrupoA.IntegracionJSF.service.EmailService;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;

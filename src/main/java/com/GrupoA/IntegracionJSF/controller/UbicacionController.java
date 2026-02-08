@@ -1,4 +1,4 @@
-package com.example.demo.controller;
+package com.GrupoA.IntegracionJSF.controller;
 
 // Imports de Spring Framework
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,10 +8,10 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 // Imports de tus clases locales (Ajusta el paquete si es necesario)
-import com.example.demo.model.Provincia;
-import com.example.demo.model.Ciudad;
-import com.example.demo.repository.ProvinciaRepository;
-import com.example.demo.repository.CiudadRepository;
+import com.GrupoA.IntegracionJSF.model.Provincia;
+import com.GrupoA.IntegracionJSF.model.Ciudad;
+import com.GrupoA.IntegracionJSF.repository.ProvinciaRepository;
+import com.GrupoA.IntegracionJSF.repository.CiudadRepository;
 
 @RestController
 @RequestMapping("/api/ubicaciones")

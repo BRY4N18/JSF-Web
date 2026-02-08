@@ -1,4 +1,4 @@
-package com.example.demo.service;
+package com.GrupoA.IntegracionJSF.service;
 
 import java.time.LocalDate;
 

@@ -1,7 +1,7 @@
-package com.example.demo.repository;
+package com.GrupoA.IntegracionJSF.repository;
 
 import org.springframework.stereotype.Repository;
-import com.example.demo.model.UsuarioEmpresa;
+import com.GrupoA.IntegracionJSF.model.UsuarioEmpresa;
 import org.springframework.data.jpa.repository.JpaRepository;
 import java.util.Optional;
 @Repository
